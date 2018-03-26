@@ -1,0 +1,24 @@
+{
+	"shell_cmd": "g++ -std=c++14 \"${file}\" -o \"${file_path}/sublCppExecFile\" && timeout 10s \"${file_path}/sublCppExecFile\" < \"${packages}/sublIn.txt\" | head -c 100K > \"${packages}/sublOut.txt\" && echo \"\n==Terminated==\" >> \"${packages}/sublOut.txt\" && rm \"${file_path}/sublCppExecFile\"",
+	"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+	"working_dir": "${file_path}",
+	"selector": "source.c, source.c++",
+
+	"variants":
+	[
+		{
+			"name": "C",
+			"shell_cmd": "gcc \"${file}\" -o \"${file_path}/sublCppExecFile\" && timeout 10s \"${file_path}/sublCppExecFile\" < \"${packages}/sublIn.txt\" | head -c 100K > \"${packages}/sublOut.txt\" && echo \"\n==Terminated==\" >> \"${packages}/sublOut.txt\" && rm \"${file_path}/sublCppExecFile\""
+		},
+		{
+			"name": "Kill",
+			"shell_cmd": "killall sublCppExecFile",
+		},
+		{
+			"name": "Touch (Run once then delete)",
+			"shell_cmd": "touch ${packages}/sublIn.txt ${packages}/sublOut.txt",
+		}
+
+	]
+}
+
