@@ -1,3 +1,20 @@
+// Download this file and place it at the location '~/.config/sublime-text-3/Packages/C++/'
+// Open any C++ file and build it using command Ctrl+Shift+B, followed by choosing 'C++ - Touch'
+// Then open the files 'sublIn.txt' and 'sublOut.txt' at the location '~/.config/sublime-text-3/Packages/'
+
+// Use origami (or any other plugin) to create new panes or use the following method that uses default settings:
+// 1. Click Layout->Columns:2 under View
+// 2. Go to the new pane and click Groups->New Group under View
+// 3. Place sublIn and sublOut into suitable panes
+// Then write a C++ program in any file, save it and build it using command Ctrl+Shift+B followed by choosing 'C++'
+
+// A brief summary of the build options: 
+// [C++] runs normal C++ files using g++14
+// [C++ - C] runs C files using gcc,
+// [C++ - Kill] kills the running command when called;
+//              it is useful if long commands are running or an infinite loop is encountered
+// [C++ - Touch] created the files sublIn.txt and sublOut.txt at the desired repository.
+//               you may not need this command after first use and are free to delete it from this file.
 {
 	"shell_cmd": "g++ -std=c++14 \"${file}\" -o \"${file_path}/sublCppExecFile\" && timeout 10s \"${file_path}/sublCppExecFile\" < \"${packages}/sublIn.txt\" | head -c 100K > \"${packages}/sublOut.txt\" && echo \"\n==Terminated==\" >> \"${packages}/sublOut.txt\" && rm \"${file_path}/sublCppExecFile\"",
 	"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
@@ -15,7 +32,7 @@
 			"shell_cmd": "killall sublCppExecFile",
 		},
 		{
-			"name": "Touch (Run once then delete)",
+			"name": "Touch",
 			"shell_cmd": "touch ${packages}/sublIn.txt ${packages}/sublOut.txt",
 		}
 
