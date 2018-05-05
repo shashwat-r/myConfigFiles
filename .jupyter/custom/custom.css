@@ -12,50 +12,20 @@ div.output_scroll {
     resize: vertical !important;
 }
 
-/*trading vertical space for horizontal space*/
+/*trading vertical space for horizontal space with minimal changes*/
 
 .prompt {
     text-align: left;
 }
 
-div.unrecognized_cell > div.prompt {
-    display: none;
-}
-
-div.text_cell > div.prompt {
-    display: none;
-}
-
 div.input {
-    /* Old browsers */
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-box-align: stretch;
-    display: -moz-box;
-    -moz-box-orient: vertical;
-    -moz-box-align: stretch;
-    display: box;
-    box-orient: vertical;
-    box-align: stretch;
-    /* Modern browsers */
-    display: flex;
     flex-direction: column;
-    align-items: stretch;
 }
 
 div.output_area {
-    /* Old browsers */
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-box-align: stretch;
-    display: -moz-box;
-    -moz-box-orient: vertical;
-    -moz-box-align: stretch;
-    display: box;
-    box-orient: vertical;
-    box-align: stretch;
-    /* Modern browsers */
-    display: flex;
     flex-direction: column;
-    align-items: stretch;
+}
+
+div.output_subarea {
+    max-width: 100%
 }
