@@ -18,6 +18,14 @@ div.output_scroll {
     text-align: left;
 }
 
+div.unrecognized_cell > div.prompt {
+    display: none;
+}
+
+div.text_cell > div.prompt {
+    display: none;
+}
+
 div.input {
     flex-direction: column;
 }
