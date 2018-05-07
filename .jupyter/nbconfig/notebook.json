@@ -1,6 +1,44 @@
 {
+  "Cell": {
+    "cm_config": {
+      "lineNumbers": true
+    }
+  },
   "keys": {
     "command": {
+      "bind": {
+        "0,0": "jupyter-notebook:restart-kernel-and-clear-output",
+        "alt-shift-ctrl-r": "jupyter-notebook:restart-kernel-and-run-all-cells",
+        "shift-0,shift-0": "jupyter-notebook:restart-kernel-and-run-all-cells",
+        "/": "jupyter-notebook:split-cell-at-cursor",
+        "ctrl-shift-b": "jupyter-notebook:run-all-cells",
+        "alt-up": "jupyter-notebook:merge-cell-with-previous-cell",
+        "shift-enter": "jupyter-notebook:run-cell-and-select-next",
+        "ctrl-up": "jupyter-notebook:insert-cell-above",
+        "ctrl-b": "jupyter-notebook:run-cell",
+        "ctrl-c": "jupyter-notebook:interrupt-kernel",
+        "ctrl-alt-r": "jupyter-notebook:restart-kernel-and-clear-output",
+        "ctrl-down": "jupyter-notebook:insert-cell-below",
+        "ctrl-shift-up": "jupyter-notebook:move-cell-up",
+        "ctrl-enter": "jupyter-notebook:run-cell",
+        "ctrl-shift-down": "jupyter-notebook:move-cell-down",
+        "ctrl-r": "jupyter-notebook:clear-all-cells-output",
+        "a": "jupyter-notebook:insert-cell-above",
+        "b": "jupyter-notebook:insert-cell-below",
+        "e": "jupyter-notebook:edit-command-mode-keyboard-shortcuts",
+        "m": "jupyter-notebook:change-cell-to-markdown",
+        "p": "jupyter-notebook:change-cell-to-code",
+        "r": "jupyter-notebook:clear-cell-output",
+        "t": "jupyter-notebook:change-cell-to-raw",
+        "alt-down": "jupyter-notebook:merge-cell-with-next-cell",
+        "alt-enter": "jupyter-notebook:run-cell-and-insert-below",
+        "ctrl-shift-h,1": "jupyter-notebook:toggle-header",
+        "ctrl-shift-h,2": "jupyter-notebook:toggle-menubar",
+        "ctrl-shift-h,3": "jupyter-notebook:toggle-toolbar",
+        "1": "jupyter-notebook:toggle-header",
+        "2": "jupyter-notebook:toggle-menubar",
+        "3": "jupyter-notebook:toggle-toolbar"
+      },
       "unbind": [
         "i,i",
         "0,0",
@@ -12,40 +50,18 @@
         "y",
         "alt-enter",
         "ctrl-enter",
-        "shift-enter"
-      ],
-      "bind": {
-        "alt-a": "jupyter-notebook:merge-selected-cells",
-        "ctrl-down": "jupyter-notebook:insert-cell-below",
-        "alt-down": "jupyter-notebook:merge-cell-with-next-cell",
-        "e": "jupyter-notebook:edit-command-mode-keyboard-shortcuts",
-        "t": "jupyter-notebook:change-cell-to-raw",
-        "9,9": "jupyter-notebook:restart-kernel-and-run-all-cells",
-        "ctrl-h,2": "jupyter-notebook:toggle-menubar",
-        "p": "jupyter-notebook:change-cell-to-code",
-        "alt-up": "jupyter-notebook:merge-cell-with-previous-cell",
-        "shift-enter": "jupyter-notebook:run-cell-and-select-next",
-        "ctrl-alt-r": "jupyter-notebook:restart-kernel",
-        "ctrl-h,3": "jupyter-notebook:toggle-toolbar",
-        "alt-shift-ctrl-r": "jupyter-notebook:restart-kernel-and-run-all-cells",
-        "m": "jupyter-notebook:change-cell-to-markdown",
-        "ctrl-shift-down": "jupyter-notebook:move-cell-down",
-        "alt-enter": "jupyter-notebook:run-cell-and-insert-below",
-        "a": "jupyter-notebook:insert-cell-above",
-        "/": "jupyter-notebook:split-cell-at-cursor",
-        "ctrl-shift-b": "jupyter-notebook:run-all-cells",
-        "ctrl-h,1": "jupyter-notebook:toggle-header",
-        "ctrl-b": "jupyter-notebook:run-cell",
-        "0,0": "jupyter-notebook:restart-kernel",
-        "ctrl-up": "jupyter-notebook:insert-cell-above",
-        "ctrl-enter": "jupyter-notebook:run-cell",
-        "b": "jupyter-notebook:insert-cell-below",
-        "ctrl-shift-up": "jupyter-notebook:move-cell-up"
-      }
+        "shift-enter",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
     }
   },
   "Notebook": {
     "Header": false,
-    "Toolbar": true
+    "Toolbar": false
   }
 }
