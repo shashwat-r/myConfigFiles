@@ -1,0 +1,19 @@
+{
+	"shell_cmd": "javac \"${file}\"",
+	"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+	"working_dir": "${file_path}",
+	"selector": "source.java",
+    // "packages": "/Users/sharags/Library/Application\\ Support/Sublime\\ Text\\ 3/Packages",
+	"variants":
+	[
+		{
+			"name": "Run",
+			"shell_cmd": "timeout 2s javac \"${file}\" && timeout 2s java -cp \"${file_path}\" \"${file_base_name}\" < \"${packages}\"/sublIn.txt > \"${packages}\"/sublOut.txt"
+			// "shell_cmd": "timeout 2s javac \"${file}\" && timeout 2s java -cp \"${file_path}\" \"${file_base_name}\" /Users/sharags/Documents/sublIn.txt > /Users/sharags/Documents/sublOut.txt"
+		},
+		{
+			"name": "Clean",
+			"shell_cmd": "rm -r \"${file_path}\"/*.class"
+		}
+	]
+}
