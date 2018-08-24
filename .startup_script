@@ -1,0 +1,7 @@
+#!/bin/sh
+if [ -f /tmp/loggedin ]; then
+    exit 0
+else
+    timeout 2s curl -d 'auth_user=&auth_pass=&accept=Sign In' https://(...) $1
+    touch /tmp/loggedin
+fi
