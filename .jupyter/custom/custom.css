@@ -38,7 +38,7 @@ div.output_subarea {
     max-width: 100%
 }
 
-/* revert to default arrangement after a certain width */
+/* set the default arrangement after a certain width */
 @media (min-width: 700px) {
     .prompt {
         text-align: right;
@@ -63,4 +63,20 @@ div.output_subarea {
     div.output_subarea {
         max-width: calc(100%-14ex)
     }
+}
+
+/*removed rightmost indicators, and shrinking menu so that checkpoints are saved without panning multiple lines*/
+.navbar-nav > li > a {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+#kernel_indicator {
+	display: none;
+}
+
+#modal_indicator {
+	display: none;
 }
