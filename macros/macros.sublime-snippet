@@ -10,10 +10,11 @@
 	class _print { 
 		string _sep=" ", _end="\n";
 	public:
-		_print& sep(string s=" ") {_sep = s; return *this;} 
+		_print& sep(string s=" ") {_sep = s; return *this;}
 		_print& end(string s="\n") {_end = s; return *this;}
-		_print& set(string s1=" ", string s2="\n") {_sep = s1; _end = s2; return *this;};
-		template <typename T> void operator()(T t) {cout << t; cout << _end; _sep=" "; _end="\n";}
+		_print& set(string s1=" ", string s2="\n") {_sep = s1; _end = s2; return *this;}
+		template <typename T=string> void operator()() {cout << _end; _sep=" "; _end="\n";}
+		template <typename T> void operator()(T t) {cout << t; operator()();}
 		template<typename T, typename... Args> void operator()(T t, Args... args) {cout << t; cout << _sep; operator()(args...);}
 	} print;
 
