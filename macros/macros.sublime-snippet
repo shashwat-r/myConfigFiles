@@ -10,8 +10,8 @@
 	class _print { 
 		string _sep=" ", _end="\n";
 	public:
-		_print& sep(string s=" ") {_sep = s; return *this;}
-		_print& end(string s="\n") {_end = s; return *this;}
+		_print& sep(string s="") {_sep = s; return *this;}
+		_print& end(string s="") {_end = s; return *this;}
 		_print& set(string s1=" ", string s2="\n") {_sep = s1; _end = s2; return *this;}
 		template <typename T=string> void operator()() {cout << _end; _sep=" "; _end="\n";}
 		template <typename T> void operator()(T t) {cout << t; operator()();}
@@ -54,7 +54,7 @@ main() {${1}
 
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>cpp</tabTrigger>
+	<tabTrigger>mac</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.c++</scope>
 </snippet>
