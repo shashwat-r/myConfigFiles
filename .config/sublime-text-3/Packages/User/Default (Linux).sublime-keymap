@@ -1,0 +1,5 @@
+[
+	{ "keys": ["escape"], "command": "cancel_build"},
+	{ "keys": ["ctrl+enter"], "command": "build"},
+	{ "keys": ["ctrl+shift+enter"], "command": "build", "args": {"select": true} },
+]
