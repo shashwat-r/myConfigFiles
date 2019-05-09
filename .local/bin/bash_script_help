@@ -1,0 +1,40 @@
+#!/bin/sh
+# Script Name: bash_script_help
+# Author: Shashwat Raghuvanshi
+# Date Created: May 9 2019
+# Description: This script demonstrates some bash functionality.
+# Files Required: This script needs no additional files to run.
+# Location: This script is located in the '/home/shashwat/.local/bin' folder, and could be located anywhere.
+# Scheduling: This script is not run as a crontab entry.
+# Error Log: This script has no Error Logging enabled.
+
+DEBUG=0
+
+echo $# 'arguments passed, namely' $@
+
+if [ $? -eq 0 ]
+then
+	echo "Last command succeeded"
+else
+	echo "Last command failed"
+fi
+
+if [ $# -ge 2 ]
+then
+	if [ $1 = 3 ] || [ $2 = 4 ]
+	then
+		echo "Arg1 is 3 or Arg2 is 4"
+	else
+		echo "Neither Arg1 is 3 nor Arg2 is 4"
+	fi
+fi
+
+if [ $# -ge 2 ]
+then
+	if [ $1 = 3 ] && [ $2 = 4 ]
+	then
+		echo "Arg1 is 3 and Arg2 is 4"
+	else
+		echo "Either Arg1 is not 3 or Arg2 is not 4"
+	fi
+fi
