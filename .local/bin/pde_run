@@ -1,0 +1,44 @@
+#!/bin/sh
+# Script Name: pde_run
+# Author: Shashwat Raghuvanshi
+# Date Created: May 9 2019
+# Description: This script automates Processing Run Command.
+# Files Required: This script needs your Processing projects to be stored in the '~/sketchbook/files' folder
+#                 and it needs the folder path of the Processing software installed in the computer.
+# Location: This script is located in the '/home/.local/bin' folder, and could be located anywhere.
+# Scheduling: This script is not run as a crontab entry.
+# Error Log: This script has no Error Logging enabled.
+
+DEBUG=0
+PROCESSING_FOLDER=/media/shashwat/New\ Volume/DevFolder/processing-3.5.3
+SKETCHBOOK_FOLDER=/home/shashwat/sketchbook/files
+PROJECT_NAME="$1"
+
+HELP_STATEMENT="\
+1. Save your work in the '~/sketchbook/files' folder
+2. Have a file with the same name as the folder, with the extension '.pde'
+3. Run this command by entering the name of the folder as first argument.\
+"
+
+if [ "$DEBUG" -ne 0 ]
+then
+	echo $PROCESSING_FOLDER
+	echo $SKETCHBOOK_FOLDER
+	echo $PROJECT_NAME
+fi
+
+if [ "$#" -eq 1 ]
+then
+
+	if [ $1 = "-h" ] || [ $1 = "--help" ]
+	then
+		echo "\n$HELP_STATEMENT\n"
+	else
+		# cd /media/shashwat/New\ Volume/DevFolder/processing-3.5.3/
+		cd "$PROCESSING_FOLDER"
+		./processing-java --sketch="$SKETCHBOOK_FOLDER"/"$PROJECT_NAME" --run
+	fi
+
+else
+	echo "Please enter Project Name"
+fi
