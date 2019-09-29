@@ -1,0 +1,10 @@
+#! /usr/bin/python
+import os
+
+url = os.popen("xclip -o").read()
+url = url.strip()
+print(url)
+download = "wget -c \""+url+"\""
+print(download)
+os.system(download)
+print("dw completed execution")
